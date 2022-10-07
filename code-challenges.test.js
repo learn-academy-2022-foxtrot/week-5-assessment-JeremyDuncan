@@ -24,12 +24,46 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // a)🧪 Create a test with expect statements using the variables provided.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const secretCodeWord1 = "Lackadaisical";
-// Expected output: "L4ck4d41s1c4l"
-const secretCodeWord2 = "Gobbledygook";
-// Expected output: "G0bbl3dyg00k"
-const secretCodeWord3 = "Eccentric";
-// Expected output: "3cc3ntr1c"
+it("returns a coded message", () => {
+  //=== Provided Test Cases ===
+  const secretCodeWord1 = "Lackadaisical";
+  const secretCodeWord2 = "Gobbledygook";
+  const secretCodeWord3 = "Eccentric";
+  //=== Expected Test Results ===
+  expected1 = "L4ck4d41s1c4l";
+  expected2 = "G0bbl3dyg00k";
+  expected3 = "3cc3ntr1c";
+
+  expect(codeMessage(secretCodeWord1)).toEqual(expected1);
+  expect(codeMessage(secretCodeWord2)).toEqual(expected2);
+  expect(codeMessage(secretCodeWord3)).toEqual(expected3);
+});
+
+//---------------------||❌ Initial Test Results ❌||---------------------------
+// FAIL  ./code-challenges.test.js
+// ✕ returns a coded message
+
+// ● returns a coded message
+
+//   ReferenceError: codeMessage is not defined
+
+//     35 |   expected3 = "3cc3ntr1c";
+//     36 |
+//   > 37 |   expect(codeMessage(secretCodeWord1)).toEqual(expected1);
+//        |   ^
+//     38 |   expect(codeMessage(secretCodeWord2)).toEqual(expected2);
+//     39 |   expect(codeMessage(secretCodeWord3)).toEqual(expected3);
+//     40 | });
+
+//     at Object.expect (code-challenges.test.js:37:3)
+
+// Test Suites: 1 failed, 1 total
+// Tests:       1 failed, 1 total
+// Snapshots:   0 total
+// Time:        0.222 s
+// Ran all test suites.
+// error Command failed with exit code 1.
+//------------------------------------------------------------------------------
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // b)👨‍💻 Create the function that makes the test pass.
