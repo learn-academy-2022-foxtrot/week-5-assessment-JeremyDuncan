@@ -3,9 +3,6 @@
 
 #*******************************************************************************
 #====================🧪 assertEqual test method 🧪 =============================
-# I decided to create a custom test method to test all the completed challenges
-# I realize I could use RSpec for this, (or not do it at all..) but thought I'd 
-# make it interesting and create a method that could test for me.
 #*******************************************************************************
 def assertEqual(actual, expected, describeTest)
   if actual === expected 
@@ -21,6 +18,11 @@ end
 # --------------------1) Create a method that takes in an array of words and a 
 # single letter and returns an array of all the words containing that particular
 # letter. Use the test variables provided.
+#*******************************************************************************
+
+#************************** Explanation **************************************** 
+# I used the select method to "select" the words that "include" the provided
+# letter. The select method returns an array of words that match the criteria.
 #*******************************************************************************
 
 def get_Word_With_Char(arr, ltr); arr.select {|word| word.include?(ltr)} end
@@ -52,6 +54,9 @@ assertEqual(get_Word_With_Char(beverages_array, letter_t),
 # HINT: Google 'ruby get rid of nested arrays'
 #*******************************************************************************
 
+#************************** Explanation ****************************************
+# 
+#*******************************************************************************
 def flatten_hash(hash); hash.values.flatten().sort end
 
 #---------------------------||🧪 Test Cases 🧪||--------------------------------
@@ -96,20 +101,30 @@ assertEqual(flatten_hash(us_states),
 # negative speeds.
 #*******************************************************************************
 class Bike 
+
+  # Initialize Bike with default value of 2 for wheels, and value of 0 for 
+  # current_speed. Added model parameter to allow naming Bike model upon 
+  # initialization of new Bike.
   def initialize model
     @model = model 
     @wheels = 2 
     @current_speed = 0 
   end
 
+  # Created method to display bike data.
   def bike_info
     "The #{@model} has #{@wheels} wheels and is going #{@current_speed} mph."
   end
 
+  # Created method to increase @current_speed based of the value passed in the 
+  # pedal_faster method.
   def pedal_faster(val)
     @current_speed += val
   end
 
+  #Created method to decrease @current_speed based of the value passed in the 
+  # brake method. If the value passed would take @current_speed below 0, then
+  # set value to 0.
   def brake(val)
     @current_speed >= 1 ? @current_speed -= val : @current_speed = 0
     @current_speed < 0 ? @current_speed = 0 : @current_speed
