@@ -109,13 +109,52 @@ const codeMessage = (msg) => {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // a)🧪 Create a test with expect statements using the variables provided.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+it("returns an array of all the words containing a particular letter", () => {
+  //=== Provided Test Cases ===
+  const fruitArray = [
+    "Mango",
+    "Cherry",
+    "Apricot",
+    "Blueberry",
+    "Peach",
+    "Kiwi",
+  ];
+  const letterA = "a";
+  const letterE = "e";
+  //=== Expected Test Results ===
+  expected1 = ["Mango", "Apricot", "Peach"];
+  expected2 = ["Cherry", "Blueberry", "Peach"];
 
-const fruitArray = ["Mango", "Cherry", "Apricot", "Blueberry", "Peach", "Kiwi"];
+  expect(getWordsThatContainLetter(fruitArray, letterA)).toEqual(expected1);
+  expect(getWordsThatContainLetter(fruitArray, letterE)).toEqual(expected2);
+});
 
-const letterA = "a";
-// Expected output: ["Mango", "Apricot", "Peach"]
-const letterE = "e";
-// Expected output: ["Cherry", "Blueberry", "Peach"]
+//---------------------||❌ Initial Test Results ❌||---------------------------
+// FAIL  ./code-challenges.test.js
+// ✓ returns a coded message (2 ms)
+// ✕ returns an array of all the words containing a particular letter (1 ms)
+
+// ● returns an array of all the words containing a particular letter
+
+//   ReferenceError: getWordsThatContainLetter is not defined
+
+//     126 |   expected2 = ["Cherry", "Blueberry", "Peach"];
+//     127 |
+//   > 128 |   expect(getWordsThatContainLetter(fruitArray, letterA)).toEqual(expected1);
+//         |   ^
+//     129 |   expect(getWordsThatContainLetter(fruitArray, letterE)).toEqual(expected2);
+//     130 | });
+//     131 |
+
+//     at Object.expect (code-challenges.test.js:128:3)
+
+// Test Suites: 1 failed, 1 total
+// Tests:       1 failed, 1 passed, 2 total
+// Snapshots:   0 total
+// Time:        0.21 s, estimated 1 s
+// Ran all test suites.
+// error Command failed with exit code 1.
+//------------------------------------------------------------------------------
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // b)👨‍💻 Create the function that makes the test pass.
