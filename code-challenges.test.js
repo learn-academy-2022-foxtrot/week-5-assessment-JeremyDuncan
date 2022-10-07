@@ -160,6 +160,24 @@ it("returns an array of all the words containing a particular letter", () => {
 // b)👨‍💻 Create the function that makes the test pass.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+const getWordsThatContainLetter = (arr, ltr) => {
+  return arr.filter((word) => {
+    return word.toLowerCase().indexOf(ltr) !== -1;
+  });
+};
+
+//--------------------||✅ Final Test Results ✅||------------------------------
+// PASS  ./code-challenges.test.js
+// ✓ returns a coded message (1 ms)
+// ✓ returns an array of all the words containing a particular letter (1 ms)
+
+// Test Suites: 1 passed, 1 total
+// Tests:       2 passed, 2 total
+// Snapshots:   0 total
+// Time:        0.198 s, estimated 1 s
+// Ran all test suites.
+// ✨  Done in 0.83s.
+//------------------------------------------------------------------------------
 //******************************************************************************
 // --------------------3)👉Create a function that takes in an array of 5 numbers
 // and determines whether or not the array is a "full house". A full house is
