@@ -28,13 +28,13 @@ def get_Word_With_Char(arr, ltr); arr.select {|word| word.include?(ltr)} end
 #---------------------------||🧪 Test Cases 🧪||--------------------------------
 beverages_array = ['coffee', 'tea', 'juice', 'water', 'soda water']
 
-# Challenege 1, Test 1                    
+# Challenge 1, Test 1                    
 letter_o = 'o'                                
 assertEqual(get_Word_With_Char(beverages_array, letter_o), 
 ["coffee", "soda water"],                            
 'gets words that contain character')             
 
-# Challenege 1, Test 2
+# Challenge 1, Test 2
 letter_t = 't'
 assertEqual(get_Word_With_Char(beverages_array, letter_t), 
 ['tea', 'water', 'soda water'], 
@@ -52,11 +52,36 @@ assertEqual(get_Word_With_Char(beverages_array, letter_t),
 # HINT: Google 'ruby get rid of nested arrays'
 #*******************************************************************************
 
+def flatten_hash(hash); hash.values.flatten().sort end
+
+#---------------------------||🧪 Test Cases 🧪||--------------------------------
+# Challenge 2, Test 1    
+
 us_states = { 
   northwest: ['Washington', 'Oregon', 'Idaho'], 
   southwest: ['California', 'Arizona', 'Nevada'], 
   notheast: ['Maine', 'New Hampshire', 'Vermont'] 
-}
+}     
+
+assertEqual(flatten_hash(us_states), 
+[
+  'Arizona', 
+  'California', 
+  'Idaho', 
+  'Maine', 
+  'Nevada',
+  'New Hampshire', 
+  'Oregon', 
+  'Vermont', 
+  'Washington'
+],                            
+'flattens and organizes hash values alphabetically')             
+#--------------------||✅ Final Test Results ✅||------------------------------
+# ruby-challenges.rb
+# ✅ TEST PASSED ==> 🧪gets words that contain character
+# ✅ TEST PASSED ==> 🧪gets words that contain character
+# ✅ TEST PASSED ==> 🧪flattens and organizes hash values alphabetically
+#-------------------------------------------------------------------------------
 # Expected output: ['Arizona', 'California', 'Idaho', 'Maine', 'Nevada', 'New Hampshire', 'Oregon', 'Vermont', 'Washington'] 
 
 #*******************************************************************************
