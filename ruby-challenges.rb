@@ -75,33 +75,87 @@ assertEqual(flatten_hash(us_states),
   'Vermont', 
   'Washington'
 ],                            
-'flattens and organizes hash values alphabetically')             
+'flattens and organizes hash values alphabetically')      
+
 #--------------------||✅ Final Test Results ✅||------------------------------
 # ruby-challenges.rb
 # ✅ TEST PASSED ==> 🧪gets words that contain character
 # ✅ TEST PASSED ==> 🧪gets words that contain character
 # ✅ TEST PASSED ==> 🧪flattens and organizes hash values alphabetically
 #-------------------------------------------------------------------------------
-# Expected output: ['Arizona', 'California', 'Idaho', 'Maine', 'Nevada', 'New Hampshire', 'Oregon', 'Vermont', 'Washington'] 
 
 #*******************************************************************************
 # --------------------3a) Create a class called Bike that is initialized with a 
 # model, wheels, and current_speed. The default number of wheels is 2. The 
 # current_speed should start at 0. Create a bike_info method that returns a 
 # sentence with all the data from the bike object.
-#*******************************************************************************
-
-# Expected output example: 'The Trek bike has 2 wheels and is going 0 mph.'
-
-
-#*******************************************************************************
+#-------------------------------------------------------------------------------
 # -------------------3b) Add the ability to pedal faster and brake. The 
 # pedal_faster method should increase the speed by a given amount. The brake 
 # method should decrease the speed by a given amount. The bike cannot go 
 # negative speeds.
 #*******************************************************************************
+class Bike 
+  def initialize model
+    @model = model 
+    @wheels = 2 
+    @current_speed = 0 
+  end
 
-# Expected output example: my_bike.pedal_faster(10) => 10
-# Expected output example: my_bike.pedal_faster(18) => 28
-# Expected output example: my_bike.brake(5) => 23
-# Expected output example: my_bike.brake(25) => 0
+  def bike_info
+    "The #{@model} has #{@wheels} wheels and is going #{@current_speed} mph."
+  end
+
+  def pedal_faster(val)
+    @current_speed += val
+  end
+
+  def brake(val)
+    @current_speed >= 1 ? @current_speed -= val : @current_speed = 0
+    @current_speed < 0 ? @current_speed = 0 : @current_speed
+  end
+end
+
+#---------------------------||🧪 Test Cases 🧪||--------------------------------
+# Create my_bike object from class
+my_bike = Bike.new("Trek Bike")
+
+# Pedal Method Tests  =============================                                   
+assertEqual(my_bike.pedal_faster(10), 10, 'Pedal Faster')             
+
+assertEqual(my_bike.pedal_faster(18), 28, 'Pedal Faster')
+
+assertEqual(my_bike.pedal_faster(25), 53, 'Pedal Faster') 
+
+
+# Pedal Method Tests  =============================
+assertEqual(my_bike.brake(2), 51, 'Brake') 
+
+assertEqual(my_bike.brake(15), 36, 'Brake') 
+
+assertEqual(my_bike.brake(55), 0, 'Brake') 
+
+# Pedal Method Tests =============================
+assertEqual(my_bike.bike_info, 
+"The Trek Bike has 2 wheels and is going 0 mph.",                            
+'Bike Info') 
+
+my_bike.pedal_faster(12)
+assertEqual(my_bike.bike_info, 
+"The Trek Bike has 2 wheels and is going 12 mph.",                            
+'Bike Info')
+
+#--------------------||✅ Final Test Results ✅||------------------------------
+# ruby-challenges.rb
+# ✅ TEST PASSED ==> 🧪gets words that contain character
+# ✅ TEST PASSED ==> 🧪gets words that contain character
+# ✅ TEST PASSED ==> 🧪flattens and organizes hash values alphabetically
+# ✅ TEST PASSED ==> 🧪Pedal Faster
+# ✅ TEST PASSED ==> 🧪Pedal Faster
+# ✅ TEST PASSED ==> 🧪Pedal Faster
+# ✅ TEST PASSED ==> 🧪Brake
+# ✅ TEST PASSED ==> 🧪Brake
+# ✅ TEST PASSED ==> 🧪Brake
+# ✅ TEST PASSED ==> 🧪Bike Info
+# ✅ TEST PASSED ==> 🧪Bike Info
+#-------------------------------------------------------------------------------
