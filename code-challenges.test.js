@@ -186,7 +186,7 @@ const getWordsThatContainLetter = (arr, ltr) => {
 // and determines whether or not the array is a "full house". A full house is
 // exactly one pair and one three of a kind.
 //******************************************************************************
-describe("getWordsThatContainLetter", () => {
+describe("determineFullHouse", () => {
   it("determines whether or not the array is a “full house”", () => {
     //=== Provided Test Cases ===
     const hand1 = [5, 5, 5, 3, 3];
