@@ -69,6 +69,37 @@ it("returns a coded message", () => {
 // b)👨‍💻 Create the function that makes the test pass.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+const codeMessage = (msg) => {
+  return msg
+    .split("")
+    .map((letter) => {
+      if (letter === "a") {
+        return 4;
+      } else if (letter.toLowerCase() === "e") {
+        return 3;
+      } else if (letter.toLowerCase() === "i") {
+        return 1;
+      } else if (letter.toLowerCase() === "o") {
+        return 0;
+      } else {
+        return letter;
+      }
+    })
+    .join("");
+};
+
+//--------------------||✅ Final Test Results ✅||------------------------------
+// PASS  ./code-challenges.test.js
+// ✓ returns a coded message (1 ms)
+
+// Test Suites: 1 passed, 1 total
+// Tests:       1 passed, 1 total
+// Snapshots:   0 total
+// Time:        0.196 s, estimated 1 s
+// Ran all test suites.
+// ✨  Done in 0.85s.
+//------------------------------------------------------------------------------
+
 //******************************************************************************
 // --------------------2)👉Create a function that takes in an array of words and
 // a single letter and returns an array of all the words containing that
