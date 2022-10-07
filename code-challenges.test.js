@@ -186,6 +186,11 @@ const getWordsThatContainLetter = (arr, ltr) => {
 // and determines whether or not the array is a "full house". A full house is
 // exactly one pair and one three of a kind.
 //******************************************************************************
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// a)🧪 Create a test with expect statements using the variables provided.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 describe("determineFullHouse", () => {
   it("determines whether or not the array is a “full house”", () => {
     //=== Provided Test Cases ===
@@ -251,19 +256,82 @@ describe("determineFullHouse", () => {
 // Ran all test suites.
 // error Command failed with exit code 1.
 //------------------------------------------------------------------------------
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// a)🧪 Create a test with expect statements using the variables provided.
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-const hand1 = [5, 5, 5, 3, 3];
-// Expected output: true
-const hand2 = [5, 5, 3, 3, 4];
-// Expected output: false
-const hand3 = [5, 5, 5, 5, 4];
-// Expected output: false
-const hand4 = [7, 2, 7, 2, 7];
-// Expected output: true
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // b)👨‍💻 Create the function that makes the test pass.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/************************** Explanation **************************************** 
+          -----------------------------------------------
+          --- 1️⃣ Iterate through array(cards) section ---
+          -----------------------------------------------
+👉 I use a forEach method to iterate through each value(card) in the 
+array(cards) and then assign that value into an object(hand). which I will
+accumulate the number of times any particular card may appear in a hand.
+
+👉 I use a ternary operator to see if the key of the object contains a value 
+or is undefined. 
+                          Undefined = FALSE 🔴
+👉 If the Key(Current Card) Value(Number of Cards) pair is undefined, then the 
+condition would be FALSE, so add 1 to the Value(Number of Cards)
+
+                              Value = TRUE 🟢
+👉 if the Key(Current Card) Value(Number of Cards) pair has a Value already 
+added to it, then the condition would be TRUE, so add +1 to the Value.
+
+            -----------------------------------------------
+            --- 2️⃣ Iterate through Object(hand) section ---
+            -----------------------------------------------
+👉 Next I want to iterate through an object and see if I have any card sets
+that equal 2 or 3. 
+
+👉 I have to use Object.values to transform my object(hand) into an array, 
+then I use the forEach method to iterate through each value(cardSet) in the 
+array. 
+                      
+👉 If card count of a card set equals 2 assign the value of TRUE to twoCards       
+👉 If card count of a card set equals 3 assign the value of TRUE to threeCards
+
+                        -----------------
+                        --- 3️⃣ Return ---
+                        -----------------
+👉 If the value of twoCards and threeCards equal TRUE, Return TRUE 🟢
+else
+👉 Return FALSE 🔴
+
+*******************************************************************************/
+
+const determineFullHouse = (cards) => {
+  let threeCards, twoCards; //Store Boolean values if condition TRUE or FALSE
+  const hand = {}; // Object to hold "counted" cards
+
+  //1️⃣
+  cards.forEach((card) => {
+    hand[card] = hand[card] ? hand[card] + 1 : 1;
+  });
+
+  //2️⃣
+  Object.values(hand).forEach((cardSet) => {
+    cardSet === 3 ? (threeCards = true) : null;
+    cardSet === 2 ? (twoCards = true) : null;
+  });
+
+  //3️⃣
+  return threeCards && twoCards ? true : false;
+};
+
+//--------------------||✅ Final Test Results ✅||------------------------------
+// PASS  ./code-challenges.test.js
+// codeMessage
+//   ✓ returns a coded message (1 ms)
+// getWordsThatContainLetter
+//   ✓ returns an array of all the words containing a particular letter
+// determineFullHouse
+//   ✓ determines whether or not the array is a “full house” (1 ms)
+
+// Test Suites: 1 passed, 1 total
+// Tests:       3 passed, 3 total
+// Snapshots:   0 total
+// Time:        0.199 s, estimated 1 s
+// Ran all test suites.
+// ✨  Done in 0.88s.
+//------------------------------------------------------------------------------
