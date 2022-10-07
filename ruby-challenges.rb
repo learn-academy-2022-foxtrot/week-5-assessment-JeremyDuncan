@@ -55,7 +55,9 @@ assertEqual(get_Word_With_Char(beverages_array, letter_t),
 #*******************************************************************************
 
 #************************** Explanation ****************************************
-# 
+# I accessed the values of the hash with the values method, then chained that 
+# with the flatten method to assign those values inside a "flat" array, then I 
+# chained that with the sort method to alphabetize the values.
 #*******************************************************************************
 def flatten_hash(hash); hash.values.flatten().sort end
 
