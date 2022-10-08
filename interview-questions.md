@@ -143,4 +143,4 @@ Research and define the following terms to the best of your ability.
 5. API:
 * According to: https://www.mulesoft.com/resources/api/what-is-an-api
   * An API is an Application Programming Interface which allows 2 applications 
-  to communicate with ach other.
+  to communicate with each other.
