@@ -53,7 +53,10 @@ Your answer:
 RoR does a lot of the heavy lifting in dealing with SQL and database migrations.
 
 Researched answer:
-* According to:
+* According to: https://rubyonrails.org/  
+  * Rails is a full-stack framework utilizes the Ruby language and has tools for the front and backend.
+  * It is used to make programming web applications easier and allows developers to write less code to accomplish more.
+  * It's an opinionated software which means it has it's best practices in which it will follow to complete a task.
 
 ---
 <!-- ----------------------------------------------------------------------- -->
