@@ -68,17 +68,6 @@ and One to Many principals using Primary Keys and Foreign Keys. There are other
 database that are non-relational such as MongoDB which is very popular.
 
 Researched answer:
-* According to:
-
----
-<!-- ----------------------------------------------------------------------- -->
-### 5. What are primary keys? Why are they important?
-
-Your answer:
-* Primary Keys are used in relational databases to associate tables with each 
-other in a database. 
-
-Researched answer:
 * According to: https://www.oracle.com/database/what-is-a-relational-database/
   * A relational database is a database that stores and provides access to data 
   that is related to each other. 
@@ -97,6 +86,17 @@ Researched answer:
     generally more flexible. 
     * Non-relational databases are generally faster since a query doesn't have
     go through several tables to deliver a result.
+
+---
+<!-- ----------------------------------------------------------------------- -->
+### 5. What are primary keys? Why are they important?
+
+Your answer:
+* Primary Keys are used in relational databases to associate tables with each 
+other in a database. 
+
+Researched answer:
+* According to:
 
 ---
 <!-- ----------------------------------------------------------------------- -->
