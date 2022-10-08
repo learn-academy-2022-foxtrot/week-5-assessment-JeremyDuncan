@@ -71,6 +71,15 @@ describe("codeMessage", () => {
 // b)👨‍💻 Create the function that makes the test pass.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+//************************** Explanation ***************************************
+// I decided to use map() since there is for-loop discrimination in this
+// workplace 😆. In order to use map() I had to:
+// 1. Turn my string into an array
+// 2. Apply map() to iterate through each letter
+// 3. Use conditional statements to return the desired number if the letter
+//    meets the condition set in the challenge. Else return the original letter.
+// 4. Join the new array values back into a string.
+//******************************************************************************
 const codeMessage = (msg) => {
   return msg
     .split("")
