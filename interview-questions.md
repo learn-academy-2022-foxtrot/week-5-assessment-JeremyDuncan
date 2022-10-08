@@ -111,6 +111,9 @@ Researched answer:
 Research and define the following terms to the best of your ability.
 
 1. RESTful routes:
+* According to: https://learn.co/lessons/sinatra-restful-routes-readme#:~:text=A%20RESTful%20route%20is%20a,HTTP%20verb%20and%20the%20URL.
+  * A RESTfull Route is the link between the HTTP GET, POST, DELETE, PATCH and
+  CRUD(CREATE, READ, UPDATE, DELETE) Actions 
 
 2. JSON:
 
