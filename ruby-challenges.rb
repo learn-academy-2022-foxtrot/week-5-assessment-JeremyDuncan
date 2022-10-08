@@ -152,7 +152,7 @@ assertEqual(my_bike.brake(15), 36, 'Brake')
 
 assertEqual(my_bike.brake(55), 0, 'Brake') 
 
-# Pedal Method Tests =============================
+# bike_info Method Tests =============================
 assertEqual(my_bike.bike_info, 
 "The Trek Bike has 2 wheels and is going 0 mph.",                            
 'Bike Info') 
