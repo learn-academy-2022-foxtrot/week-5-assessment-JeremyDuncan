@@ -116,9 +116,17 @@ Research and define the following terms to the best of your ability.
   CRUD(CREATE, READ, UPDATE, DELETE) Actions 
 
 2. JSON:
+* According to: https://www.w3schools.com/whatis/whatis_json.asp
+  * JSON stands for JavaScript Object Notation and is used for transporting data
+  * Often used to send data between server and webpage.
 
 3. ERB:
+* According to:
+
 
 4. Params:
+* According to:
+
 
 5. API:
+* According to:
