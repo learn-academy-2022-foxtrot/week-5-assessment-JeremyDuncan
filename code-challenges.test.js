@@ -81,21 +81,40 @@ describe("codeMessage", () => {
 // 4. Join the new array values back into a string.
 //******************************************************************************
 
+// const codeMessage = (msg) => {
+//   return msg
+//     .split("")
+//     .map((letter) => {
+//       if (letter === "a") {
+//         return 4;
+//       } else if (letter.toLowerCase() === "e") {
+//         return 3;
+//       } else if (letter.toLowerCase() === "i") {
+//         return 1;
+//       } else if (letter.toLowerCase() === "o") {
+//         return 0;
+//       } else {
+//         return letter;
+//       }
+//     })
+//     .join("");
+// };
+
+// Refactored version with ternary operators-------------------------------------
+
 const codeMessage = (msg) => {
   return msg
     .split("")
     .map((letter) => {
-      if (letter === "a") {
-        return 4;
-      } else if (letter.toLowerCase() === "e") {
-        return 3;
-      } else if (letter.toLowerCase() === "i") {
-        return 1;
-      } else if (letter.toLowerCase() === "o") {
-        return 0;
-      } else {
-        return letter;
-      }
+      return letter.toLowerCase() === "a"
+        ? 4
+        : letter.toLowerCase() === "e"
+        ? 3
+        : letter.toLowerCase() === "i"
+        ? 1
+        : letter.toLowerCase() === "o"
+        ? 0
+        : letter;
     })
     .join("");
 };
