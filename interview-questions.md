@@ -16,8 +16,13 @@ learn. Write your researched answer in your OWN WORDS.
 Your answer:
 * A gem is similar to how yarn or npm works for JavScript. Gems contain ruby 
 code that contain data to be used. Some examples would be Rubocop, and RSpec.
-Researched answer:
 
+Researched answer:
+* According to: https://guides.rubygems.org/what-is-a-gem/
+  * A gem is a component that contains code, tests, supporting utilities, 
+  documentation, and a gemspec.
+    * A gemspec provides info about the gem such as the author, name, version, 
+    descriptions, and links to the code's page.
 
 ---
 <!-- ----------------------------------------------------------------------- -->
@@ -26,7 +31,7 @@ Researched answer:
 Your answer:
 
 Researched answer:
-
+* According to:
 
 ---
 <!-- ----------------------------------------------------------------------- -->
@@ -35,8 +40,9 @@ Researched answer:
 Your answer:
 * Ruby on Rails is a backend framework that helps speed up and deploy web apps.
 RoR does a lot of the heavy lifting in dealing with SQL and database migrations.
-Researched answer:
 
+Researched answer:
+* According to:
 
 ---
 <!-- ----------------------------------------------------------------------- -->
@@ -48,7 +54,7 @@ and One to Many principals using Primary Keys and Foreign Keys. There are other
 database that are non-relational such as MongoDB which is very popular.
 
 Researched answer:
-
+* According to:
 
 ---
 <!-- ----------------------------------------------------------------------- -->
@@ -59,7 +65,7 @@ Your answer:
 other in a database. 
 
 Researched answer:
-
+* According to:
 
 ---
 <!-- ----------------------------------------------------------------------- -->
