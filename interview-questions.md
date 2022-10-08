@@ -79,7 +79,24 @@ Your answer:
 other in a database. 
 
 Researched answer:
-* According to:
+* According to: https://www.oracle.com/database/what-is-a-relational-database/
+  * A relational database is a database that stores and provides access to data 
+  that is related to each other. 
+  * They are based on a relational model which utilize Keys. 
+  * 4 important properties on a relational database include: 
+    * Atomicity - The elements that create a complete database transaction.
+    * Consistency - The rules for maintaining data in the correct state after
+    a transaction has been made.
+    * Isolation - Keeps transactions invisible to other until the transaction 
+    process has completed. 
+    * Durability - Data changes become permanent on a transaction has occurred.
+* According to: https://www.mongodb.com/databases/non-relational 
+  * A Non-Relational database is sometimes referred to as NoSQL and the main
+  difference between these two is how they store data. 
+    * Non-relational databases store data in a non-tabular format and are 
+    generally more flexible. 
+    * Non-relational databases are generally faster since a query doesn't have
+    go through several tables to deliver a result.
 
 ---
 <!-- ----------------------------------------------------------------------- -->
