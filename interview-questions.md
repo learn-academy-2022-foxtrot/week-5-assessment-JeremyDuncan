@@ -133,7 +133,10 @@ Research and define the following terms to the best of your ability.
 <!-- ----------------------------------------------------------------------- -->
 
 4. Params:
-* According to:
+* According to: https://guides.rubyonrails.org/action_controller_overview.html
+  * Params are objects that act like hashes, but they allow the use of symbols 
+  and strings interchangeably.
+  * allows access to data sent by a user or other parameters.
 
 ---
 <!-- ----------------------------------------------------------------------- -->
