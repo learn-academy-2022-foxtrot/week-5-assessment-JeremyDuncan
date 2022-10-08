@@ -202,9 +202,7 @@ describe("getWordsThatContainLetter", () => {
 //******************************************************************************
 
 const getWordsThatContainLetter = (arr, ltr) => {
-  return arr.filter((word) => {
-    return word.toLowerCase().indexOf(ltr) !== -1;
-  });
+  return arr.filter((word) => word.toLowerCase().indexOf(ltr) !== -1);
 };
 
 //--------------------||✅ Final Test Results ✅||------------------------------
