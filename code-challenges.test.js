@@ -80,6 +80,7 @@ describe("codeMessage", () => {
 //    meets the condition set in the challenge. Else return the original letter.
 // 4. Join the new array values back into a string.
 //******************************************************************************
+
 const codeMessage = (msg) => {
   return msg
     .split("")
@@ -171,6 +172,14 @@ describe("getWordsThatContainLetter", () => {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // b)👨‍💻 Create the function that makes the test pass.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//************************** Explanation ***************************************
+// I decided to use filter() since I wanted to "filter" out values I do not need
+// 1. Apply filter() to iterate through each word
+// 2. Return the word if the indexOf() method does NOT return -1 for the
+//    provided letter. -1 means that the letter is not present in the index
+//    of the word.
+//******************************************************************************
 
 const getWordsThatContainLetter = (arr, ltr) => {
   return arr.filter((word) => {
