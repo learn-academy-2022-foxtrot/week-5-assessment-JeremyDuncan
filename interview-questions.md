@@ -114,19 +114,28 @@ Research and define the following terms to the best of your ability.
 * According to: https://learn.co/lessons/sinatra-restful-routes-readme#:~:text=A%20RESTful%20route%20is%20a,HTTP%20verb%20and%20the%20URL.
   * A RESTfull Route is the link between the HTTP GET, POST, DELETE, PATCH and
   CRUD(CREATE, READ, UPDATE, DELETE) Actions 
+---
+<!-- ----------------------------------------------------------------------- -->
 
 2. JSON:
 * According to: https://www.w3schools.com/whatis/whatis_json.asp
   * JSON stands for JavaScript Object Notation and is used for transporting data
   * Often used to send data between server and webpage.
+---
+<!-- ----------------------------------------------------------------------- -->
 
 3. ERB:
-* According to:
+* According to: https://hackernoon.com/you-need-to-know-what-is-erb-in-rails-and-how-to-master-it-oj303yxq
+  * ERB stands for embedded Ruby, and is a template engine that works with HTML.
+  * ERB is the default render engine for Rails when displaying content. 
 
+---
+<!-- ----------------------------------------------------------------------- -->
 
 4. Params:
 * According to:
 
-
+---
+<!-- ----------------------------------------------------------------------- -->
 5. API:
 * According to:
