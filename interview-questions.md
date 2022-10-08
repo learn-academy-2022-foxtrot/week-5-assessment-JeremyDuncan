@@ -29,9 +29,20 @@ Researched answer:
 ### 2. What does the acronym CRUD stand for?
 
 Your answer:
+* Crud stands for Create Read Update and Delete. These are the basic types of 
+functionality that are apart of an API.
 
 Researched answer:
-* According to:
+* According to: https://www.freecodecamp.org/news/crud-operations-explained/
+  * CRUD is an abbreviation for the 4 basic operations that an application 
+  should perform.
+  * CRUD apps consist of an API, a Database, and a UI 
+  * Each letter of CRUD has a corresponding HTTP request method associated with
+  it:
+    * Creat   =>  POST
+    * Read    =>  GET
+    * Update  =>  Put or Patch
+    * Delete  =>  DELETE
 
 ---
 <!-- ----------------------------------------------------------------------- -->
