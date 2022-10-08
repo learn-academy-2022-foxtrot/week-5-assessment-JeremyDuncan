@@ -358,24 +358,33 @@ else
 // };
 
 //------------------------------------------------------------------------------
-// Refactored version with map() and reduce() ----------------------------------
-// I prefer the above function though 🤷‍♂️ ---------------------------------------
+// Another version with map() and reduce() -------------------------------------
+//------------------------------------------------------------------------------
+// const determineFullHouse = (cards) => {
+//   const hand = {};
+//   return cards
+//     .map((card) => {
+//       let threeCards, twoCards;
+
+//       hand[card] = hand[card] ? hand[card] + 1 : 1;
+
+//       Object.values(hand).forEach((cardSet) => {
+//         cardSet === 3 ? (threeCards = true) : null;
+//         cardSet === 2 ? (twoCards = true) : null;
+//       });
+//       return threeCards && twoCards ? true : false;
+//     })
+//     .reduce((val, nextVal) => (val = nextVal === true ? true : false));
+// };
+
+//------------------------------------------------------------------------------
+// Final Refactored Version ----------------------------------------------------
 //------------------------------------------------------------------------------
 const determineFullHouse = (cards) => {
   const hand = {};
-  return cards
-    .map((card) => {
-      let threeCards, twoCards;
-
-      hand[card] = hand[card] ? hand[card] + 1 : 1;
-
-      Object.values(hand).forEach((cardSet) => {
-        cardSet === 3 ? (threeCards = true) : null;
-        cardSet === 2 ? (twoCards = true) : null;
-      });
-      return threeCards && twoCards ? true : false;
-    })
-    .reduce((val, nextVal) => (val = nextVal === true ? true : false));
+  cards.forEach((card) => {hand[card] = hand[card] ? hand[card] + 1 : 1});
+  let sets = Object.values(hand);
+  return sets.includes(2) && sets.includes(3) ? true : false;
 };
 
 //--------------------||✅ Final Test Results ✅||------------------------------
