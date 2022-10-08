@@ -96,7 +96,13 @@ Your answer:
 other in a database. 
 
 Researched answer:
-* According to:
+* According to: https://www.techopedia.com/definition/5547/primary-key
+  * A primary key is a special column in a relational database that uniquely
+  identifies every table record.
+  * Primary Keys:
+    * Must contain unique values.
+    * Cannot have null values.
+    * Every row must have a primary key.
 
 ---
 <!-- ----------------------------------------------------------------------- -->
