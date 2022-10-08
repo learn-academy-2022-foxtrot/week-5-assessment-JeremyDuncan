@@ -100,8 +100,9 @@ describe("codeMessage", () => {
 //     .join("");
 // };
 
-// Refactored version with ternary operators-------------------------------------
-
+//------------------------------------------------------------------------------
+// Refactored version with ternary operators -----------------------------------
+//------------------------------------------------------------------------------
 const codeMessage = (msg) => {
   return msg
     .split("")
@@ -337,23 +338,44 @@ else
 
 *******************************************************************************/
 
+// const determineFullHouse = (cards) => {
+//   let threeCards, twoCards; //Store Boolean values if condition TRUE or FALSE
+//   const hand = {}; // Object to hold "counted" cards
+
+//   //1️⃣
+//   cards.forEach((card) => {
+//     hand[card] = hand[card] ? hand[card] + 1 : 1;
+//   });
+
+//   //2️⃣
+//   Object.values(hand).forEach((cardSet) => {
+//     cardSet === 3 ? (threeCards = true) : null;
+//     cardSet === 2 ? (twoCards = true) : null;
+//   });
+
+//   //3️⃣
+//   return threeCards && twoCards ? true : false;
+// };
+
+//------------------------------------------------------------------------------
+// Refactored version with map() and reduce() ----------------------------------
+// I prefer the above function though 🤷‍♂️ ---------------------------------------
+//------------------------------------------------------------------------------
 const determineFullHouse = (cards) => {
-  let threeCards, twoCards; //Store Boolean values if condition TRUE or FALSE
-  const hand = {}; // Object to hold "counted" cards
+  const hand = {};
+  return cards
+    .map((card) => {
+      let threeCards, twoCards;
 
-  //1️⃣
-  cards.forEach((card) => {
-    hand[card] = hand[card] ? hand[card] + 1 : 1;
-  });
+      hand[card] = hand[card] ? hand[card] + 1 : 1;
 
-  //2️⃣
-  Object.values(hand).forEach((cardSet) => {
-    cardSet === 3 ? (threeCards = true) : null;
-    cardSet === 2 ? (twoCards = true) : null;
-  });
-
-  //3️⃣
-  return threeCards && twoCards ? true : false;
+      Object.values(hand).forEach((cardSet) => {
+        cardSet === 3 ? (threeCards = true) : null;
+        cardSet === 2 ? (twoCards = true) : null;
+      });
+      return threeCards && twoCards ? true : false;
+    })
+    .reduce((val, nextVal) => (val = nextVal === true ? true : false));
 };
 
 //--------------------||✅ Final Test Results ✅||------------------------------
