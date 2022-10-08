@@ -383,7 +383,7 @@ else
 const determineFullHouse = (cards) => {
   const hand = {};
   cards.forEach((card) => {hand[card] = hand[card] ? hand[card] + 1 : 1});
-  let sets = Object.values(hand);
+  const sets = Object.values(hand);
   return sets.includes(2) && sets.includes(3) ? true : false;
 };
 
