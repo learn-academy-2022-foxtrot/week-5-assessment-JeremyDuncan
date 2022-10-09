@@ -103,22 +103,54 @@ describe("codeMessage", () => {
 //------------------------------------------------------------------------------
 // Refactored version with ternary operators -----------------------------------
 //------------------------------------------------------------------------------
+// const codeMessage = (msg) => {
+//   return msg
+//     .split("")
+//     .map((letter) => {
+//       return letter.toLowerCase() === "a"
+//         ? 4
+//         : letter.toLowerCase() === "e"
+//         ? 3
+//         : letter.toLowerCase() === "i"
+//         ? 1
+//         : letter.toLowerCase() === "o"
+//         ? 0
+//         : letter;
+//     })
+//     .join("");
+// };
+
+
+//------------------------------------------------------------------------------
+// Refactored version with Switch Cases ----------------------------------------
+//------------------------------------------------------------------------------
+
+//************************** Explanation ***************************************
+// I think I like this version the most since the code is the simple and to the 
+// point. If the letter in the switch matches the case, then return the 
+// appropriate number or letter.
+//******************************************************************************
+
 const codeMessage = (msg) => {
   return msg
     .split("")
     .map((letter) => {
-      return letter.toLowerCase() === "a"
-        ? 4
-        : letter.toLowerCase() === "e"
-        ? 3
-        : letter.toLowerCase() === "i"
-        ? 1
-        : letter.toLowerCase() === "o"
-        ? 0
-        : letter;
+      switch (letter.toLowerCase()) {
+        case "a":
+          return 4;
+        case "e":
+          return 3;
+        case "i":
+          return 1;
+        case "o":
+          return 0;
+        default:
+          return letter;
+      }
     })
     .join("");
 };
+
 
 //--------------------||✅ Final Test Results ✅||------------------------------
 // PASS  ./code-challenges.test.js
