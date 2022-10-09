@@ -154,12 +154,39 @@ describe("getWordsThatContainLetter", () => {
     ];
     const letterA = "a";
     const letterE = "e";
+
+    //=== Edge Cases ===
+    const letterCapE = "E"
+    const letterCapA = "A"
+
     //=== Expected Test Results ===
     expected1 = ["Mango", "Apricot", "Peach"];
     expected2 = ["Cherry", "Blueberry", "Peach"];
 
     expect(getWordsThatContainLetter(fruitArray, letterA)).toEqual(expected1);
     expect(getWordsThatContainLetter(fruitArray, letterE)).toEqual(expected2);
+  });
+  it("Works if the letters are capital", () => {
+    //=== Provided Test Cases ===
+    const fruitArray = [
+      "Mango",
+      "Cherry",
+      "Apricot",
+      "Blueberry",
+      "Peach",
+      "Kiwi",
+    ];
+
+    //=== Edge Test Cases ===
+    const letterCapA = "A"
+    const letterCapE = "E"
+    
+    //=== Expected Test Results ===
+    expected3 = ["Mango", "Apricot", "Peach"];
+    expected4 = ["Cherry", "Blueberry", "Peach"];
+
+    expect(getWordsThatContainLetter(fruitArray, letterCapA)).toEqual(expected3);
+    expect(getWordsThatContainLetter(fruitArray, letterCapE)).toEqual(expected4);
   });
 });
 //---------------------||❌ Initial Test Results ❌||---------------------------
@@ -202,7 +229,7 @@ describe("getWordsThatContainLetter", () => {
 //******************************************************************************
 
 const getWordsThatContainLetter = (arr, ltr) => {
-  return arr.filter((word) => word.toLowerCase().indexOf(ltr) !== -1);
+  return arr.filter((word) => word.toLowerCase().indexOf(ltr.toLowerCase()) !== -1);
 };
 
 //--------------------||✅ Final Test Results ✅||------------------------------
