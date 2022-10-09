@@ -379,13 +379,23 @@ else
 // };
 
 //------------------------------------------------------------------------------
-// Final Refactored Version ----------------------------------------------------
+// Another Refactored Version --------------------------------------------------
 //------------------------------------------------------------------------------
+// const determineFullHouse = (cards) => {
+//   const hand = {};
+//   cards.forEach((card) => {hand[card] = hand[card] ? hand[card] + 1 : 1});
+//   const sets = Object.values(hand);
+//   return sets.includes(2) && sets.includes(3) ? true : false;
+// };
+
+
+//------------------------------------------------------------------------------
+// Compressed Refactored Version -----------------------------------------------
+//------------------------------------------------------------------------------
+
 const determineFullHouse = (cards) => {
-  const hand = {};
-  cards.forEach((card) => {hand[card] = hand[card] ? hand[card] + 1 : 1});
-  const sets = Object.values(hand);
-  return sets.includes(2) && sets.includes(3) ? true : false;
+  const hand = {}; cards.forEach((card) => {hand[card] = hand[card] ? hand[card] + 1 : 1});
+  return Object.values(hand).includes(2) && Object.values(hand).includes(3) ? true : false;
 };
 
 //--------------------||✅ Final Test Results ✅||------------------------------
