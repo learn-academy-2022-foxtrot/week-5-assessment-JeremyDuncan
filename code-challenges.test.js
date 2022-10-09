@@ -126,7 +126,7 @@ describe("codeMessage", () => {
 //------------------------------------------------------------------------------
 
 //************************** Explanation ***************************************
-// I think I like this version the most since the code is the simple and to the 
+// I think I like this version the most since the code is simple and to the 
 // point. If the letter in the switch matches the case, then return the 
 // appropriate number or letter.
 //******************************************************************************
